@@ -6,6 +6,9 @@ var app = express()
 // app.use(bodyParser.text());
 
 app.get('/', function (req, res) {
+  if (process.env.DEBUG=="1") {
+    console.error(req);
+  }
   res.send("hello world\n");
 })
 
