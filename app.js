@@ -19,7 +19,8 @@ app.post('/json', bodyParser.json(), function (req, res) {
 
  app.post('/raw', bodyParser.raw(), function (req, res) {
   console.log("body: " + req.body.toString());
-  res.send("hello world\n");
+  // res.send("hello world\n");
+  res.send("body:" + req.body.toString() + "\n");
 })
 
 app.post('/text', bodyParser.text({type:"*/*"}), function (req, res) {
